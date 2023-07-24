@@ -28,20 +28,23 @@ The suffix(..) can be one of Role, LabelText, PlaceHolderText, Text, DisplayValu
 1) getBy... queries>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 getBy.. class of queries return the matching node for a query, and throw a descriptive error if no elements match or if more than one match is found
 The suffix can be one of Role, LabelText, PlaceHolderText, Text, DisplayValue, AltText, Title and finally Testld.
-1. getByRole    ===>    first argument will be role second will be name, heading expect
-                        Inner text of the Element.
-                        const bioElement = screen.getByRole("textbox", {
-                                                name: "Bio" //Inner text of the Element
-                                            });
-                        expect(bioElement).toBeInTheDocument();
+1. getByRole    ===>            first argument will be role second will be name, heading expect
+                                Inner text of the Element.
+                                const bioElement = screen.getByRole("textbox", {
+                                                        name: "Bio" //Inner text of the Element
+                                                    });
+                                expect(bioElement).toBeInTheDocument();
 
-2. getByLabelText==>    getByLabelText will search for the label that matches the given text, 
-                        then find the element associated with that label
+2. getByLabelText==>            getByLabelText will search for the label that matches the given text, 
+                                then find the element associated with that label
 
-                        test('component renders correctly', () => {
-                            render(<Application />);
-                            const textElement = screen.getByLabelText("Name", {
-                                selector: "input" //input will be the tag and "Name" will be innner text of label
-                            });
-                            expect(textElement).toBeInTheDocument();
-                        })
+                                test('component renders correctly', () => {
+                                    render(<Application />);
+                                    const textElement = screen.getByLabelText("Name", {
+                                        selector: "input" //input will be the tag and "Name" will be innner text of label
+                                    });
+                                    expect(textElement).toBeInTheDocument();
+                                })
+
+3. getByPlaceholderText==>      getByPlaceholderText will search for all elements with a placeholder attribute and
+                                find one that matches the given text

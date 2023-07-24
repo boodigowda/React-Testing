@@ -50,6 +50,7 @@ describe('Application getByRole', () => {
     })
 
 });
+//https://testing-library.com/docs/queries/byrole
 
 describe('Application getByLabelText', () => {
     test('component renders correctly', () => {
@@ -73,6 +74,10 @@ describe('Application getByLabelText', () => {
     })
 });
 
-
-
-//https://testing-library.com/docs/queries/byrole
+describe('Application getByPlaceholderText', () => {
+    test('Placeholder Texts in the input element', () => {
+        render(<Application />);
+        const textElement = screen.getByPlaceholderText("Fullname");//Full name will be the placeholder in input
+        expect(textElement).toBeInTheDocument();
+    })
+});
