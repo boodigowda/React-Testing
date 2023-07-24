@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import Application from "./Application";
 
-describe('Application', () => {
+describe('Application getByRole', () => {
     test('component renders correctly', () => {
         render(<Application />);
         const textElement = screen.getByRole("textbox", {
@@ -49,6 +49,28 @@ describe('Application', () => {
         expect(pageHeading2).toBeInTheDocument();
     })
 
+});
+
+describe('Application getByLabelText', () => {
+    test('component renders correctly', () => {
+        render(<Application />);
+        const textElement = screen.getByLabelText("Name", {
+            selector: "input" //input will be the tag and "Name" will be innner text of label
+        });
+        expect(textElement).toBeInTheDocument();
+    })
+
+    // test('component renders correctly', () => {
+    //     render(<Application />);
+    //     const textElement = screen.getByLabelText("Name123");
+    //     expect(textElement).toBeInTheDocument();
+    // })
+
+    test('Wrapped Label Texts', () => {
+        render(<Application />);
+        const textElement = screen.getByLabelText("I agree to the terms and conditions");
+        expect(textElement).toBeInTheDocument();
+    })
 });
 
 
