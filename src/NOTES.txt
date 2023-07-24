@@ -1,0 +1,10 @@
+What to test?
+1. Test component renders
+2. Test component renders with props
+3. Test component renders in differnt states
+4. Test component react to events
+
+What not to test?
+1. Implementation details
+2. Third party code
+3. Code that is not important user point of view
