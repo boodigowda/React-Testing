@@ -8,3 +8,24 @@ What not to test?
 1. Implementation details
 2. Third party code
 3. Code that is not important user point of view
+
+
+RTL Queries
+Queries are the methods that Testing Library provides to find elements on the page
+
+To find a single element on the page, we have
+1. getBy..
+2. queryBy..
+3. findBy..
+
+To find multiple elements on the page, we have
+1. getAllBy..
+2. queryAllBy.. 
+3. findAllBy..
+
+The suffix(..) can be one of Role, LabelText, PlaceHolderText, Text, DisplayValue, AltText, Title and finally Testid
+
+1) getBy... queries>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+getBy.. class of queries return the matching node for a query, and throw a descriptive error if no elements match or if more than one match is found
+The suffix can be one of Role, LabelText, PlaceHolderText, Text, DisplayValue, AltText, Title and finally Testld.
+1. getByRole
