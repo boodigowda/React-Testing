@@ -77,6 +77,7 @@ Priority Order for Queries  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 8. getByTestId
 
 RTL getBy and getAllBy Queries  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+getBy and getAllBy class of queries to assert if elements are present in the DOM(IMPORTANT)
 getByRole                       getAllByRole
 getByLabelText                  getAllByLabelText
 getByPlaceholderText            getAllByPlaceholderText
@@ -119,7 +120,7 @@ Throws an error if more than one match is found
 
 queryAllBy
 Returns an array of all matching nodes for a query, and return an empty array if no elements match
-
+queryBy and queryAllBy class of queries to assert if elements are not present in the DOM(IMPORTANT)
 queryByRole                     queryAllByRole
 queryByLabelText                queryAllByLabelText
 queryByPlaceholderText          queryAllByPlaceholderText
@@ -127,11 +128,23 @@ queryByText                     queryAllText
 queryByDisplayValue             queryAllByDisplayValue
 queryByAltText                  queryAllByAltText
 queryBy Title                   queryAllByTitle
-queryByTestId                  queryAllByTestId
+queryByTestId                   queryAllByTestId
+
+
+Appearance / Disappearance >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+What if elements are not present in the DOM to begin but make their way into the DOM after some time?
+For example, data that is fetched from a server will be rendered only after a few milliseconds
 
 
 
-
+findBy and findAllBy
+1. findBy
+Returns a Promise which resolves when an element is found which matches the given query
+The promise is rejected if no element is found or if more than one element is found after a default timeout of 1000ms
+2. findAllBy
+Returns a promise which resolves to an array of elements when any elements are found which match the given query
+The promise is rejected if no elements are found after a default timeout of 1000ms
 
 
 
