@@ -6,7 +6,11 @@ const Application = () => {
             <h1>Job application form</h1>
             <h2>Section 1</h2>
             <p>All fields are manditory</p>
+            <span title='spanText'>getByTitle Element</span>
             <img src="./" alt="flower image" />
+            <div data-testid='custom-element'>
+                Custom Html Element
+            </div>
             <form>
                 <div>
                     <label htmlFor="name">Name</label>

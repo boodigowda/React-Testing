@@ -105,3 +105,19 @@ describe('Application getByAltText', () => {
         expect(altElement).toBeInTheDocument();
     })
 });
+
+describe('Application getByTitle', () => {
+    test('title text is present', () => {
+        render(<Application />);
+        const titleElement = screen.getByTitle("spanText");//Full name will be the placeholder in input
+        expect(titleElement).toBeInTheDocument();
+    })
+});
+
+describe('Application getByTestId', () => {
+    test('data test Id text is present', () => {
+        render(<Application />);
+        const testIdElement = screen.getByTestId("custom-element");//Full name will be the placeholder in input
+        expect(testIdElement).toBeInTheDocument();
+    })
+});
