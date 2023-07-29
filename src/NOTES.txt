@@ -25,7 +25,7 @@ To find multiple elements on the page, we have
 
 The suffix(..) can be one of Role, LabelText, PlaceHolderText, Text, DisplayValue, AltText, Title and finally Testid
 
-1) getBy... queries>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+1. getBy... queries>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 getBy.. class of queries return the matching node for a query, and throw a descriptive error if no elements match or if more than one match is found
 The suffix can be one of Role, LabelText, PlaceHolderText, Text, DisplayValue, AltText, Title and finally Testld.
 1. getByRole    ===>            first argument will be role second will be name, heading expect
@@ -51,3 +51,5 @@ The suffix can be one of Role, LabelText, PlaceHolderText, Text, DisplayValue, A
 
 4. getByText===>                getByText will search for all elements that have a text node with textContent matching the given text
                                 Typically, you'd use this to find paragraph, div or span elements
+
+5. getByDisplayValue===>        getByDisplayValue returns the input, textarea, or select element that has the matching display value.
