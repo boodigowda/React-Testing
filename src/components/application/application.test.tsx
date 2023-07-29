@@ -97,3 +97,11 @@ describe('Application getByDisplayValue', () => {
         expect(nameElement).toBeInTheDocument();
     })
 });
+
+describe('Application getByAltText', () => {
+    test('Alt text is present', () => {
+        render(<Application />);
+        const altElement = screen.getByAltText("flower image");//Full name will be the placeholder in input
+        expect(altElement).toBeInTheDocument();
+    })
+});
