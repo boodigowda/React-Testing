@@ -1,3 +1,5 @@
+npm run coverage => to get report in browser
+npm run test skills.test.tsx  => to run particular file
 What to test?
 1. Test component renders
 2. Test component renders with props
@@ -70,3 +72,13 @@ Priority Order for Queries
 6. getByAltText
 7. getByTitle
 8. getByTestId
+
+RTL getBy and getAllBy Queries
+getByRole                       getAllByRole
+getByLabelText                  getAllByLabelText
+getByPlaceholderText            getAllByPlaceholderText
+getByText                       getAllByText
+getByDisplayValue               getAllByDisplayValue
+getByAltText                    getAllByAltText
+getByTitle                      getAllBy Title
+getByTestid                     getAllByTestid

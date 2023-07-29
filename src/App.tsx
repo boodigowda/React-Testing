@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Application from './components/application/Application';
+import Skills from './components/skills/Skills';
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <Application />
+      {/* <Application /> */}
+      {<Skills skills={['HTML', 'CSS']} />}
     </div>
   );
 }
