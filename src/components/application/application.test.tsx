@@ -89,3 +89,11 @@ describe('Application getByText', () => {
         expect(paragraphElement).toBeInTheDocument();
     })
 });
+
+describe('Application getByDisplayValue', () => {
+    test('Display text is present', () => {
+        render(<Application />);
+        const nameElement = screen.getByDisplayValue("Boodi");//Full name will be the placeholder in input
+        expect(nameElement).toBeInTheDocument();
+    })
+});

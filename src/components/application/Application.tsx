@@ -13,7 +13,7 @@ const Application = () => {
                         type="text"
                         id="name"
                         placeholder="Fullname"
-                        value="Vishwas"
+                        value="Boodi"
                         onChange={() => { }}
                     />
                 </div>
