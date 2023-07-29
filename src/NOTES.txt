@@ -1,5 +1,8 @@
 npm run coverage => to get report in browser
 npm run test skills.test.tsx  => to run particular file
+
+
+
 What to test?
 1. Test component renders
 2. Test component renders with props
@@ -12,7 +15,7 @@ What not to test?
 3. Code that is not important user point of view
 
 
-RTL Queries
+RTL Queries >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 Queries are the methods that Testing Library provides to find elements on the page
 
 To find a single element on the page, we have
@@ -62,7 +65,7 @@ The suffix can be one of Role, LabelText, PlaceHolderText, Text, DisplayValue, A
 7. getByTestId====>             getByTestId returns the element that has the matching data-testid attribute.
 
 
-Priority Order for Queries
+Priority Order for Queries  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 "Your test should resemble how users interact with your code (component, page, etc.) as much as possible"
 1. getByRole
 2. getByLabelText
@@ -73,7 +76,7 @@ Priority Order for Queries
 7. getByTitle
 8. getByTestId
 
-RTL getBy and getAllBy Queries
+RTL getBy and getAllBy Queries  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 getByRole                       getAllByRole
 getByLabelText                  getAllByLabelText
 getByPlaceholderText            getAllByPlaceholderText
@@ -82,3 +85,26 @@ getByDisplayValue               getAllByDisplayValue
 getByAltText                    getAllByAltText
 getByTitle                      getAllBy Title
 getByTestid                     getAllByTestid
+
+TextMatch  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+TextMatch represents a type which can be either a
+string
+regex
+function
+
+1. TextMatch - string
+<div>Hello World</div>
+screen.getByText("Hello World') // full string match
+screen.getByText('llo Worl', {exact: false}) // substring match
+screen.getByText('hello world', {exact: false}) // ignore case
+
+2. TextMatch - regex
+<div>Hello World</div>
+screen.getByText(/World/) // substring match
+screen.getByText(/world/i) // substring match, ignore case
+screen.getByText(/^hello world$/i) // full string match, ignore case
+
+3. TextMatch - custom function
+(content?: string, element?: Element | null) => boolean
+<div>Hello World</div>
+screen.getByText((content) => content.startsWith('Hello'))
