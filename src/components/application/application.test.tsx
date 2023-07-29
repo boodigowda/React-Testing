@@ -81,3 +81,11 @@ describe('Application getByPlaceholderText', () => {
         expect(textElement).toBeInTheDocument();
     })
 });
+
+describe('Application getByText', () => {
+    test('Paragraph text is present', () => {
+        render(<Application />);
+        const paragraphElement = screen.getByText("All fields are manditory");//Full name will be the placeholder in input
+        expect(paragraphElement).toBeInTheDocument();
+    })
+});

@@ -48,3 +48,6 @@ The suffix can be one of Role, LabelText, PlaceHolderText, Text, DisplayValue, A
 
 3. getByPlaceholderText==>      getByPlaceholderText will search for all elements with a placeholder attribute and
                                 find one that matches the given text
+
+4. getByText===>                getByText will search for all elements that have a text node with textContent matching the given text
+                                Typically, you'd use this to find paragraph, div or span elements
